@@ -132,14 +132,32 @@ footer {
 
 /* Cabezote */
 
+@keyframes backgroundPrehead {
+    0% {
+        background-color: #f1f1f1;
+    }
+    25% {
+        background-color: #e5e6d3;
+    }
+    50% {
+        background-color: #d4e6d3;
+    }
+    75% {
+        background-color: #d3dee6;
+    }
+    100% {
+        background-color: #d3dee6;
+    }
+}
+
 .preheader {
-    background-color: #f1f1f1;
+    animation: backgroundPrehead ease infinite 5s;
     padding: 5px 30px;
     font-size: 14px;
 }
 
 .info-message {
-    font-weight: 100;
+    font-weight: 300;
     width: 70%;
     display: inline-block;
     text-align: left;
@@ -224,6 +242,14 @@ nav .top-access li {
     display: none;
 }
 
+.top-access li a span {
+    transition: all 0.2s;
+}
+
+.top-access li a span:hover {
+    color: #888787;
+}
+
 
 /* categorías */
 
@@ -266,6 +292,7 @@ nav .top-access li {
     color: #000;
     font-weight: 300;
     background-color: #fff;
+    transition: all 0.6s;
 }
 
 .btn-secondary:hover {
@@ -365,6 +392,13 @@ nav .top-access li {
     display: inline-block;
     min-width: 13px;
     text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.item-sizes a:hover {
+    background: black;
+    color: #fff;
 }
 
 .call-to-action {
@@ -384,12 +418,22 @@ nav .top-access li {
 .btn-primary-fill {
     background-color: #000;
     color: #fff;
+    transition: all 0.3s;
+}
+
+.btn-primary-fill:hover {
+    font-size: 17px;
 }
 
 .btn-primary-square {
     background-color: #fff;
     color: #000;
     border: 1px solid #000;
+    transition: all 0.3s;
+}
+
+.btn-primary-square:hover {
+    font-size: 17px;
 }
 
 
