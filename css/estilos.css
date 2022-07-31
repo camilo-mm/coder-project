@@ -568,7 +568,6 @@ footer {
 footer h2 {
     font-size: 20px;
     font-weight: 600;
-    width: 40%;
     display: inline-block;
     vertical-align: middle;
     text-align: left;
@@ -591,6 +590,16 @@ footer .redes-sociales a {
     border-radius: 50%;
     padding: 9px 8px 8px 11px;
     margin: 0 10px;
+}
+
+.btn-suscribe-cmm {
+    background-color: #000;
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 0.25rem rgb(222 222 222 / 25%);
 }
 
 
@@ -913,6 +922,19 @@ footer .redes-sociales a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    footer .contenedor-form-suscribe {
+        display: flex;
+        flex-wrap: wrap !important;
+    }
+    footer .contenedor-form-suscribe input {
+        width: 100%;
+        border-radius: 5px !important;
+    }
+    footer .contenedor-form-suscribe button {
+        width: 100%;
+        border-radius: 5px !important;
+        margin-top: 20px;
     }
     /* CARRITO */
     .product-cart {
