@@ -1,0 +1,177 @@
+/* Cabezote */
+
+@keyframes backgroundPrehead {
+    0% {
+        background-color: $colorGreyF1;
+    }
+    25% {
+        background-color: #e5e6d3;
+    }
+    50% {
+        background-color: #d4e6d3;
+    }
+    75% {
+        background-color: #d3dee6;
+    }
+    100% {
+        background-color: #d3dee6;
+    }
+}
+
+.preheader {
+    animation: backgroundPrehead ease infinite 5s;
+    padding: 5px 30px;
+    font-size: 14px;
+}
+
+.info-message {
+    font-weight: 300;
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    a {
+        color: $colorBlack;
+    }
+}
+
+.info-account {
+    font-weight: 400;
+    color: $colorBlack;
+    display: inline-block;
+    width: 29%;
+    text-align: right;
+    ul {
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 0 0 15px;
+        }
+    }
+}
+
+
+/* menu */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    background-color: $colorWhite;
+    position: sticky !important;
+    top: 0;
+    z-index: 99;
+    border-bottom: 1px solid $colorGreyF1;
+    .navbar-toggler {
+        padding-left: $paddingGeneral;
+        border: 0;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .navbar-nav {
+        padding: 0px 30px;
+    }
+    .top-access {
+        padding-right: $paddingGeneral;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    ul {
+        li {
+            list-style-type: none;
+            display: inline-block;
+            a {
+                font-weight: 300;
+                color: $colorBlack;
+            }
+        }
+    }
+    .logo-tns-tm {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        a {
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .top-access {
+        li {
+            padding: 0 0 0 10px;
+        }
+    }
+}
+
+.menu-access {
+    .item-menu {
+        display: inline;
+    }
+    li {
+        padding: 0 10px 0 0;
+    }
+    .top-access {
+        li {
+            a {
+                span {
+                    transition: all 0.2s;
+                    &:hover {
+                        color: #888787;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    /* HEADER */
+    header {
+        .preheader {
+            .info-message,
+            .info-account {
+                width: 100%;
+            }
+            .info-message {
+                text-align: center;
+            }
+            .info-account {
+                text-align: right;
+                margin: 5px 0;
+            }
+        }
+    }
+    nav {
+        .top-access {
+            position: absolute;
+            right: 0;
+        }
+        .navbar-nav {
+            background-color: $colorWhite;
+            padding: 15px 30px;
+            border-bottom: 1px solid $colorGreyF1;
+            li {
+                margin: 5px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    /* HEADER */
+    .logo-tns-tm {
+        top: 5px;
+    }
+    .logo-tns-tm {
+        a {
+            img {
+                width: 150px;
+            }
+        }
+    }
+    nav {
+        align-items: flex-end;
+    }
+}

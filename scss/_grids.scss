@@ -1,0 +1,115 @@
+/* GRID HOME */
+
+#homeGrid {
+    display: grid;
+    grid-template-areas: "header header header header" "nav nav nav nav" "bannerPrincipal bannerPrincipal bannerPrincipal bannerPrincipal" "categorys categorys categorys categorys" "vitrina vitrina vitrina vitrina" "bannersDosCol bannersDosCol bannersDosCol bannersDosCol" "bannersTresCol bannersTresCol bannersTresCol bannersTresCol" "textoSeo textoSeo textoSeo textoSeo" "footer footer footer footer"
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.main-banner {
+    grid-area: bannerPrincipal;
+}
+
+.categorys {
+    grid-area: categorys;
+}
+
+.vitrine {
+    grid-area: vitrina;
+}
+
+.banners-2-col {
+    grid-area: bannersDosCol;
+}
+
+.banners-3-col {
+    grid-area: bannersTresCol;
+}
+
+.seo-text {
+    grid-area: textoSeo;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* GRID PRODUCTS */
+
+#productListGrid {
+    display: grid;
+    grid-template-areas: "header header header header" "nav nav nav nav" "tituloPagina tituloPagina tituloPagina tituloPagina" "vitrina vitrina vitrina vitrina" "footer footer footer footer"
+}
+
+.title-page {
+    grid-area: tituloPagina;
+}
+
+
+/* GRID WISHLIST */
+
+#wishlistGrid {
+    display: grid;
+    grid-template-areas: "header header header header" "nav nav nav nav" "tituloPagina tituloPagina tituloPagina tituloPagina" "vitrina vitrina vitrina vitrina" "footer footer footer footer"
+}
+
+
+/* GRID DETAIL PRODUCT */
+
+#productDetailGrid {
+    display: grid;
+    grid-template-areas: "header header header header header" "nav nav nav nav nav" "tituloPagina tituloPagina tituloPagina tituloPagina tituloPagina" "fotosProducto fotosProducto fotosProducto descripcionProducto descripcionProducto" "footer footer footer footer footer"
+}
+
+.picture-product {
+    grid-area: fotosProducto;
+}
+
+.product-description {
+    grid-area: descripcionProducto;
+}
+
+
+/* GRID CARRITO */
+
+#carritoGrid {
+    display: grid;
+    grid-template-areas: "header header header header header" "nav nav nav nav nav" "tituloPagina tituloPagina tituloPagina tituloPagina tituloPagina" "resumenCarrito resumenCarrito resumenCarrito carritoAmount carritoAmount" "footer footer footer footer footer"
+}
+
+.resumen-carrito-products {
+    grid-area: resumenCarrito;
+}
+
+.resumen-carrito-amount {
+    grid-area: carritoAmount;
+}
+
+
+/* GRID CONTACT */
+
+#gridContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header header" "nav nav nav nav" "tituloPagina tituloPagina tituloPagina tituloPagina" "form form multimedia multimedia" "maps maps maps maps" "footer footer footer footer"
+}
+
+.formulario-contacto {
+    grid-area: form;
+}
+
+.multimedia {
+    grid-area: multimedia;
+}
+
+.maps {
+    grid-area: maps;
+}

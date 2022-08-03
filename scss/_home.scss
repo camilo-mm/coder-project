@@ -1,0 +1,338 @@
+/*banners*/
+
+.main-banner {
+    background-color: $colorGreyF1;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    .carousel {
+        margin-top: 0;
+    }
+}
+
+
+/* categorías */
+
+.categorys {
+    background-color: $colorGreyF1;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        font-weight: 300;
+        padding: 0 20px;
+        color: $colorBlack;
+        font-size: 17px;
+        &:not(:last-child) {
+            border-right: 1px solid $colorBlack;
+        }
+    }
+}
+
+.btn-secondary {
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: 1px solid $colorBlack;
+    color: $colorBlack;
+    font-weight: 300;
+    background-color: $colorWhite;
+    transition: all 0.6s;
+    &:hover {
+        color: $colorWhite;
+        background-color: $colorBlack;
+    }
+}
+
+.vitrine {
+    padding: $paddingGeneral;
+    .title {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.item-carousel {
+    position: relative;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 19%;
+    img {
+        width: 100%;
+    }
+    h3 {
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .brand {
+        font-weight: 300;
+        font-size: 12px;
+    }
+    .flag {
+        font-weight: 400;
+        font-size: 12px;
+        background-color: $colorWhite;
+        width: 80px;
+        text-align: center;
+        position: absolute;
+        right: -20px;
+        top: 45px;
+        transform: rotate(270deg);
+        padding: 3px 0;
+    }
+}
+
+.item-price {
+    width: 100%;
+    font-size: 16px;
+    margin: 7px 0;
+    .discount,
+    .new-price,
+    .old-price {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .discount {
+        background-color: $colorBlack;
+        padding: 2px 5px;
+        color: $colorWhite;
+        font-weight: 400;
+    }
+    .new-price {
+        font-weight: 400;
+        color: $colorBlack;
+    }
+    .old-price {
+        font-size: 14px;
+        font-weight: 300;
+        color: $colorBlack;
+        text-decoration: line-through;
+    }
+}
+
+.item-sizes {
+    a {
+        font-weight: 300;
+        font-size: 12px;
+        border: 1px solid $colorBlack;
+        padding: 3px 5px;
+        display: inline-block;
+        min-width: 27px;
+        text-align: center;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            background: black;
+            color: $colorWhite !important;
+        }
+    }
+}
+
+.call-to-action {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.btn-site-square {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin: 5px 0;
+}
+
+// .btn-primary-fill,
+// .btn-primary-square {
+//     display: block;
+//     width: 100%;
+//     padding: 10px 0;
+//     text-align: center;
+//     margin: 5px 0;
+// }
+.btn-primary-fill {
+    @extend .btn-site-square;
+    background-color: $colorBlack;
+    color: $colorWhite;
+    transition: all 0.3s;
+    &:hover {
+        font-size: 17px;
+        color: $colorWhite;
+    }
+}
+
+.btn-primary-square {
+    @extend .btn-site-square;
+    background-color: $colorWhite;
+    color: $colorBlack;
+    border: 1px solid $colorBlack;
+    transition: all 0.3s;
+     :hover {
+        font-size: 17px;
+    }
+}
+
+
+/* banners */
+
+.bloque-banners {
+    padding: $paddingGeneral;
+    .banner {
+        position: relative;
+        .caption-banners {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, 0);
+            h3 {
+                color: $colorWhite;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+            a {
+                color: $colorBlack;
+                background-color: $colorWhite;
+                padding: 5px 30px;
+                border-radius: 50px;
+                font-weight: 300;
+                margin-top: 10px;
+            }
+        }
+    }
+    .title {
+        margin-bottom: 40px;
+    }
+    .col-2 {
+        width: 49%;
+        img {
+            width: 100%;
+        }
+    }
+    .col-3 {
+        width: 32%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content-banners {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* SEO */
+
+.seo-text {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 50px;
+    text-align: left;
+    h1 {
+        font-size: 25px;
+        margin-bottom: $paddingGeneral;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 991px) {
+    /* CARRUSEL */
+    .carousel {
+        .item-carousel {
+            width: 49%;
+        }
+    }
+    .product-list {
+        .carousel {
+            .item-carousel {
+                width: 49%;
+            }
+        }
+    }
+    .vitrine,
+    .bloque-banners {
+        padding: 20px;
+    }
+    /* BANNERS */
+    .bloque-banners {
+        .col-3 {
+            width: 49%;
+            margin-bottom: 10px;
+        }
+    }
+    .content-banners {
+        flex-wrap: wrap;
+    }
+    /* SEO */
+    .seo-text {
+        padding: 0;
+        width: 85%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* CATEGORIAS */
+    .categorys {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px 0;
+        a {
+            padding: 10px 20px;
+            &:not(:last-child) {
+                border-right: 0
+            }
+        }
+    }
+    /* CARRUSEL */
+    .carousel {
+        .item-carousel {
+            width: 100%;
+        }
+    }
+    .product-list {
+        .carousel {
+            .item-carousel {
+                width: 100%;
+            }
+        }
+    }
+    .vitrine,
+    .bloque-banners {
+        padding: 10px;
+    }
+    /* BANNERS */
+    .content-banners,
+    .vitrine {
+        .title {
+            flex-wrap: wrap;
+        }
+    }
+    .bloque-banners {
+        .col-2 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .col-3 {
+            width: 100%;
+        }
+    }
+    .seo-text {
+        padding: 0;
+        width: 90%;
+        h1 {
+            font-size: 20px;
+        }
+    }
+}

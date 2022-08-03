@@ -1,0 +1,99 @@
+/* Carrito */
+
+.resumen-carrito-products {
+    margin: 0 0 0 20px;
+}
+
+.resumen-carrito-amount {
+    background-color: $colorGreyF1;
+    height: 200px;
+    padding: 10px;
+    margin: 0 20px 0 0;
+    .item-price {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-weight: 300;
+        }
+    }
+}
+
+.product-cart {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.prodcutos-agregados {
+    .product-cart {
+        .col-1-img-name {
+            width: 40%;
+            img {
+                width: 40px;
+                vertical-align: middle;
+            }
+            .name-brand {
+                display: inline-block;
+                vertical-align: middle;
+                h3 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .col-2-price {
+            width: 18%;
+            .old-price {
+                font-size: 14px;
+                font-weight: 300;
+                text-decoration: line-through;
+            }
+        }
+        .col-3-cantidad,
+        .col-4-total {
+            width: 18%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    /* CARRITO  */
+    #carritoGrid {
+        grid-template-areas: "header header" "nav nav" "tituloPagina tituloPagina" "resumenCarrito resumenCarrito" "carritoAmount carritoAmount" "footer footer"
+    }
+    .resumen-carrito-amount {
+        margin: 10px;
+        margin-bottom: 100px;
+    }
+    .resumen-carrito-products {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* CARRITO */
+    .product-cart {
+        flex-wrap: wrap;
+    }
+    .prodcutos-agregados {
+        .product-cart {
+            .col-2-price,
+            .col-3-cantidad {
+                width: 50%;
+            }
+            .col-1-img-name,
+            .col-4-total {
+                width: 100%;
+            }
+            .col-2-price,
+            .col-3-cantidad,
+            .col-1-img-name,
+            .col-4-total {
+                margin: 9px 0 0 0;
+            }
+        }
+    }
+}
