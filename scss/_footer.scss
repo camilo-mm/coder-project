@@ -1,5 +1,14 @@
 /* footer */
 
+//colección de variables
+$mapRedes:(facebook: #afe7f9, instagram:#f9afee, whatsapp: #aff9db, play: #dedede);
+@each $red,
+$color in $mapRedes {
+    .icon-#{$red}:hover {
+        color: $color
+    }
+}
+
 footer {
     background-color: $colorGreyF1;
     background-image: url("../img/bg-image-ex.webp");
@@ -43,7 +52,7 @@ footer {
 .form-control {
     &:focus {
         border-color: $colorBlack;
-        box-shadow: 0 0 0 0.25rem $colorBlack;
+        box-shadow: 0 0 0 0.25rem #d0d0d040;
     }
 }
 
@@ -73,6 +82,9 @@ footer {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            a {
+                padding: 7px 11px 6px 11px;
+            }
         }
         .contenedor-form-suscribe {
             display: flex;

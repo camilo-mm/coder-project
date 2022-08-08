@@ -149,14 +149,6 @@
     margin: 5px 0;
 }
 
-// .btn-primary-fill,
-// .btn-primary-square {
-//     display: block;
-//     width: 100%;
-//     padding: 10px 0;
-//     text-align: center;
-//     margin: 5px 0;
-// }
 .btn-primary-fill {
     @extend .btn-site-square;
     background-color: $colorBlack;
@@ -181,6 +173,10 @@
 
 
 /* banners */
+
+@mixin columnas($ancho) {
+    width: $ancho;
+}
 
 .bloque-banners {
     padding: $paddingGeneral;
@@ -211,13 +207,13 @@
         margin-bottom: 40px;
     }
     .col-2 {
-        width: 49%;
+        @include columnas(49%);
         img {
             width: 100%;
         }
     }
     .col-3 {
-        width: 32%;
+        @include columnas(32%);
         img {
             width: 100%;
         }

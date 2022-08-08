@@ -24,6 +24,11 @@
     margin-bottom: 15px;
 }
 
+.texto-cart {
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .prodcutos-agregados {
     .product-cart {
         .col-1-img-name {
@@ -39,16 +44,14 @@
                     font-size: 16px;
                 }
                 p {
-                    font-size: 14px;
-                    font-weight: 300;
+                    @extend .texto-cart;
                 }
             }
         }
         .col-2-price {
             width: 18%;
             .old-price {
-                font-size: 14px;
-                font-weight: 300;
+                @extend .texto-cart;
                 text-decoration: line-through;
             }
         }

@@ -1,0 +1,7 @@
+Cambios realizados para SEO:
+Modifiqué todos los meta titulos (en las 5 páginas y en el index), 
+Agregué todos los meta descripciones (en las 5 páginas y en el index),
+Agregué h1 a todas las páginas incuido el index 
+Agrugué alt a las imagenes de todas las páginas e index acorde a su contenido 
+optimicé las imagenes con la herramienta tiny para que cargue mejor el sitio
+
