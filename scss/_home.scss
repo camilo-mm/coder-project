@@ -128,9 +128,10 @@
         min-width: 27px;
         text-align: center;
         transition: all 0.3s;
+        color: $colorBlack;
         cursor: pointer;
         &:hover {
-            background: black;
+            background: $colorBlack;
             color: $colorWhite !important;
         }
     }
