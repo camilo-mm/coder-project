@@ -1,10 +1,10 @@
 /* footer */
 
 //colección de variables
-$mapRedes:(facebook: #afe7f9, instagram:#f9afee, whatsapp: #aff9db, play: #dedede);
-@each $red,
-$color in $mapRedes {
-    .icon-#{$red}:hover {
+$mapRedesFooter:(facebook: #afe7f9, instagram:#f9afee, whatsapp: #aff9db, play: #dedede);
+@each $redFooter,
+$color in $mapRedesFooter {
+    .icon-#{$redFooter}:hover {
         color: $color
     }
 }

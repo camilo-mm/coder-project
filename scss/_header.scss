@@ -53,13 +53,17 @@ $coloresPrehead:(colorDos:#e5e6d3, colorTres:#d4e6d3, colorCuatro:#d3dee6, color
 
 /* menu */
 
+.navbar-cmm {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     height: 50px;
     align-items: center;
     background-color: $colorWhite;
-    top: 0;
     z-index: 99;
     border-bottom: 1px solid $colorGreyF1;
     .navbar-toggler {
@@ -71,7 +75,6 @@ nav {
     }
     .navbar-nav {
         padding: 0px 30px;
-        position: sticky;
     }
     .top-access {
         padding-right: $paddingGeneral;

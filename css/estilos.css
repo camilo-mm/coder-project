@@ -143,13 +143,16 @@ footer {
     padding: 0 0 0 15px; }
 
 /* menu */
+.navbar-cmm {
+  position: sticky;
+  top: 0; }
+
 nav {
   display: flex;
   justify-content: space-between;
   height: 50px;
   align-items: center;
   background-color: #fff;
-  top: 0;
   z-index: 99;
   border-bottom: 1px solid #f1f1f1; }
   nav .navbar-toggler {
@@ -158,8 +161,7 @@ nav {
     nav .navbar-toggler:focus {
       box-shadow: none; }
   nav .navbar-nav {
-    padding: 0px 30px;
-    position: sticky; }
+    padding: 0px 30px; }
   nav .top-access {
     padding-right: 30px; }
   nav .navbar-toggler:focus {
