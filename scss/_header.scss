@@ -165,17 +165,21 @@ nav {
 
 @media (max-width: 600px) {
     /* HEADER */
-    .logo-tns-tm {
-        top: 5px;
-    }
-    .logo-tns-tm {
-        a {
-            img {
-                width: 150px;
-            }
-        }
-    }
     nav {
         align-items: flex-end;
+        .logo-tns-tm {
+            top: 12px;
+            a {
+                img {
+                    width: 150px;
+                }
+            }
+        }
+        .top-access {
+            padding-right: 10px;
+        }
+        .navbar-toggler {
+            padding-left: 10px;
+        }
     }
 }

@@ -1,14 +1,14 @@
 /* Carrito */
 
 .resumen-carrito-products {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 30px;
 }
 
 .resumen-carrito-amount {
     background-color: $colorGreyF1;
     height: 200px;
     padding: 10px;
-    margin: 0 20px 0 0;
+    margin: 0 30px 0 0;
     .item-price {
         display: flex;
         justify-content: space-between;
@@ -34,8 +34,9 @@
         .col-1-img-name {
             width: 40%;
             img {
-                width: 40px;
+                width: 50px;
                 vertical-align: middle;
+                margin: 0 10px 0 0;
             }
             .name-brand {
                 display: inline-block;
@@ -50,6 +51,9 @@
         }
         .col-2-price {
             width: 18%;
+            .new-price {
+                margin-bottom: 8px;
+            }
             .old-price {
                 @extend .texto-cart;
                 text-decoration: line-through;
@@ -68,11 +72,11 @@
         grid-template-areas: "header header" "nav nav" "tituloPagina tituloPagina" "resumenCarrito resumenCarrito" "carritoAmount carritoAmount" "footer footer"
     }
     .resumen-carrito-amount {
-        margin: 10px;
+        margin: 10px 30px;
         margin-bottom: 100px;
     }
     .resumen-carrito-products {
-        margin: 10px;
+        margin: 10px 30px;
     }
 }
 
@@ -83,6 +87,13 @@
     }
     .prodcutos-agregados {
         .product-cart {
+            border-bottom: 1px solid #cfcfcf;
+            .col-2-price {
+                .new-price,
+                .old-price {
+                    margin: 0;
+                }
+            }
             .col-2-price,
             .col-3-cantidad {
                 width: 50%;
@@ -96,6 +107,10 @@
             .col-1-img-name,
             .col-4-total {
                 margin: 9px 0 0 0;
+            }
+            .col-3-cantidad,
+            .col-4-total {
+                text-align: right;
             }
         }
     }
