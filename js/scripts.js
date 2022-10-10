@@ -11,19 +11,26 @@ function Usuario(nombre, cupon) {
 const usuario1 = new Usuario("", "")
 
 class Producto {
-    constructor(nombreProducto, precio, descuento) {
+    constructor(nombreProducto, precio, descuento, stock) {
         this.nombreProducto = nombreProducto
         this.precio = precio
         this.descuento = descuento
+        this.stock = stock
     }
 
 }
 
-const camiseta = new Producto("Camiseta", 20000, 0)
-const vestido = new Producto("Vestido", 15000, 0)
-const jean = new Producto("Jean", 25000, 0)
-const sudadera = new Producto("Sudadera", 30000, 0)
+const camiseta = new Producto("Camiseta", 20000, 0, 10)
+const vestido = new Producto("Vestido", 15000, 0, 50)
+const jean = new Producto("Jean", 25000, 0, 20)
+const sudadera = new Producto("Sudadera", 30000, 0, 0)
 
+let listadoDeProductos = [camiseta, vestido, jean, sudadera]
+let listadoDeProductosConStock = listadoDeProductos.filter((product) => product.stock > 0)
+
+let listadoNombresConStock = listadoDeProductosConStock.map((product) => product.nombreProducto)
+
+console.log(listadoNombresConStock)
 
 let nombreDeUsuario = prompt("Gracias por entrar a Tennis Tienda de ropa online \ningresa tu nombre para registrarte o continua sin registro haciendo clic en aceptar");
 
@@ -44,31 +51,32 @@ mostrarProductos()
 carrito()
 
 function mostrarProductos() {
-    let compras = parseInt(prompt("Te presentamos nuestros productos \n1 Camiseta\n2 Vestido\n3 Jean\n4 Sudadera\n ingresa el número del producto que deseas agregar al carrito\n ingresa 0 para ir a pagar o salir"))
+    let compras = prompt("Te presentamos nuestros productos\n - " + listadoNombresConStock.join("\n - ") + "\ningresa el nombre del producto que deseas agregar al carrito\n ingresa 0 para ir a pagar o salir").toUpperCase()
+    console.log(compras)
         // let cantidad = parseInt(prompt("Ingresa la cantidad"))
         //Repetimos con While hasta que el usuario ingresa "ESC"
     while (compras != 0) {
         //alert("el usuario ingresó " + compras)
         switch (compras) {
-            case 1:
+            case "CAMISETA":
                 cantidad = parseInt(prompt("Ingresa la cantidad de " + camiseta.nombreProducto + " que deseas agregar"))
                 usuario1.totalProducto1 += caluclarPrecios(camiseta.precio, cantidad)
                 usuario1.totalCarrito += usuario1.totalProducto1
                 console.log(usuario1)
                 break;
-            case 2:
+            case "VESTIDO":
                 cantidad = parseInt(prompt("Ingresa la cantidad de " + vestido.nombreProducto + " que deseas agregar"))
                 usuario1.totalProducto2 += caluclarPrecios(vestido.precio, cantidad)
                 usuario1.totalCarrito += usuario1.totalProducto2
                 console.log(usuario1)
                 break;
-            case 3:
+            case "JEAN":
                 cantidad = parseInt(prompt("Ingresa la cantidad de " + jean.nombreProducto + " que deseas agregar"))
                 usuario1.totalProducto3 += caluclarPrecios(jean.precio, cantidad)
                 usuario1.totalCarrito += usuario1.totalProducto3
                 console.log(usuario1)
                 break;
-            case 4:
+            case "SUDADERA":
                 cantidad = parseInt(prompt("Ingresa la cantidad de " + sudadera.nombreProducto + " que deseas agregar"))
                 usuario1.totalProducto4 += caluclarPrecios(sudadera.precio, cantidad)
                 usuario1.totalCarrito += usuario1.totalProducto4
@@ -78,7 +86,7 @@ function mostrarProductos() {
                 alert("Opción inválida, por favor verifíca tu selección")
                 break;
         }
-        compras = parseInt(prompt("Si deseas seguir comprando ingresa el número del producto que deseas agregar al carrito \n1 Camiseta\n2 Vestido\n3 Jean\n4 Sudadera\n ingresa 0 para ir a pagar o salir"))
+        compras = prompt("Si deseas seguir comprando ingresa el nombre del producto que deseas agregar al carrito \n1 Camiseta\n2 Vestido\n3 Jean\n4 Sudadera\n ingresa 0 para ir a pagar o salir").toUpperCase()
     }
 }
 
