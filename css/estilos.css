@@ -27,7 +27,7 @@ a:hover {
 /* GRID HOME */
 #homeGrid {
   display: grid;
-  grid-template-areas: "header header header header" "nav nav nav nav" "bannerPrincipal bannerPrincipal bannerPrincipal bannerPrincipal" "categorys categorys categorys categorys" "vitrina vitrina vitrina vitrina" "bannersDosCol bannersDosCol bannersDosCol bannersDosCol" "bannersTresCol bannersTresCol bannersTresCol bannersTresCol" "textoSeo textoSeo textoSeo textoSeo" "footer footer footer footer"; }
+  grid-template-areas: "header header header header" "nav nav nav nav" "bannerPrincipal bannerPrincipal bannerPrincipal bannerPrincipal" "categorys categorys categorys categorys" "vitrina vitrina vitrina vitrina" "wishlist wishlist wishlist wishlist" "bannersDosCol bannersDosCol bannersDosCol bannersDosCol" "bannersTresCol bannersTresCol bannersTresCol bannersTresCol" "textoSeo textoSeo textoSeo textoSeo" "footer footer footer footer"; }
 
 header {
   grid-area: header; }
@@ -43,6 +43,9 @@ nav {
 
 .vitrine {
   grid-area: vitrina; }
+
+.wishlist {
+  grid-area: wishlist; }
 
 .banners-2-col {
   grid-area: bannersDosCol; }
@@ -270,7 +273,7 @@ nav {
 .carousel {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 15px; }
 
 .item-carousel {
@@ -331,10 +334,19 @@ nav {
   text-align: center;
   transition: all 0.3s;
   color: #000;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0 2px; }
   .item-sizes a:hover {
     background: #000;
     color: #fff !important; }
+
+.item-sizes .agotado {
+  color: #d3d3d3 !important;
+  cursor: default;
+  border: 1px solid #d3d3d3; }
+  .item-sizes .agotado:hover {
+    background: #fff;
+    color: #d3d3d3 !important; }
 
 .call-to-action {
   width: 100%;

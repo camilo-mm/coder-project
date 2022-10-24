@@ -56,7 +56,7 @@
 .carousel {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 15px;
 }
 
@@ -130,9 +130,20 @@
         transition: all 0.3s;
         color: $colorBlack;
         cursor: pointer;
+        margin: 0 2px;
         &:hover {
             background: $colorBlack;
             color: $colorWhite !important;
+        }
+    }
+    .agotado {
+        // text-decoration: line-through;
+        color: #d3d3d3 !important;
+        cursor: default;
+        border: 1px solid #d3d3d3;
+        &:hover {
+            background: #fff;
+            color: #d3d3d3 !important;
         }
     }
 }

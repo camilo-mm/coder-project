@@ -2,7 +2,7 @@
 
 #homeGrid {
     display: grid;
-    grid-template-areas: "header header header header" "nav nav nav nav" "bannerPrincipal bannerPrincipal bannerPrincipal bannerPrincipal" "categorys categorys categorys categorys" "vitrina vitrina vitrina vitrina" "bannersDosCol bannersDosCol bannersDosCol bannersDosCol" "bannersTresCol bannersTresCol bannersTresCol bannersTresCol" "textoSeo textoSeo textoSeo textoSeo" "footer footer footer footer"
+    grid-template-areas: "header header header header" "nav nav nav nav" "bannerPrincipal bannerPrincipal bannerPrincipal bannerPrincipal" "categorys categorys categorys categorys" "vitrina vitrina vitrina vitrina" "wishlist wishlist wishlist wishlist" "bannersDosCol bannersDosCol bannersDosCol bannersDosCol" "bannersTresCol bannersTresCol bannersTresCol bannersTresCol" "textoSeo textoSeo textoSeo textoSeo" "footer footer footer footer"
 }
 
 header {
@@ -23,6 +23,10 @@ nav {
 
 .vitrine {
     grid-area: vitrina;
+}
+
+.wishlist {
+    grid-area: wishlist;
 }
 
 .banners-2-col {
