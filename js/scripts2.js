@@ -1,3 +1,7 @@
+fetch('productos.json')
+    .then((response) => response.json())
+    .then((data) => renderProducts(data, catalog));
+
 class Producto {
     constructor(nombreProducto, idproducto, price, brand, category, img = [], discount, variant = {}) {
         this.nombreProducto = nombreProducto

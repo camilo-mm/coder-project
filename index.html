@@ -36,13 +36,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="menu-access navbar-nav">
+                <!-- <ul class="menu-access navbar-nav">
                     <li class="item-menu nav-item"><a href="pages/product-list.html">Productos</a></li>
                     <li class="item-menu nav-item"><a href="pages/product-detail.html">Detalle</a></li>
                     <li class="item-menu nav-item"><a href="pages/wishlist.html">Whishlist</a></li>
                     <li class="item-menu nav-item"><a href="pages/cart.html">Cart</a></li>
                     <li class="item-menu nav-item"><a href="pages/contact.html">Contact</a></li>
-                </ul>
+                </ul> -->
             </div>
 
             <div class="logo-tns-tm">
@@ -51,9 +51,14 @@
                 </a>
             </div>
             <ul class="top-access">
-                <li><a href="#"><span class="icon-search"></span></a></li>
-                <li><a href="#"><span class="icon-bookmark"></span></a></li>
-                <li><a href="#"><span class="icon-cart"></span></a></li>
+                <!-- <li><a href="#"><span class="icon-search"></span></a></li>
+                <li><a href="#"><span class="icon-bookmark"></span></a></li> -->
+                <li>
+                    <a href="#" id="iconminicart">
+                        <span class="icon-cart"></span>
+                        <span id="countCart">0</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 
@@ -226,12 +231,22 @@
 
         <!-- fin vitrina de produtos -->
 
-        <section class="vitrine wishlist">
+        <section class="vitrine minicart miniclose" id="minicart">
+            <div class="close-minicart">
+                <a href="#" id="cerrar-mini-cart"><span class="icon-minus"></span></a>
+            </div>
             <div class="title">
-                <h2>WishList</h2>
+                <h2>Carrito de compras</h2>
             </div>
-            <div class="carousel" id="wishlist">
+            <div class="carousel" id="minicartProducts">
             </div>
+            <div id="totalSinDiscount">
+
+            </div>
+            <div id="totalCompra">
+
+            </div>
+
         </section>
 
         <!-- inicio banners -->
@@ -351,7 +366,10 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script src="js/scripts2.js"></script>
+    <script src="js/scripts3.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </body>
 
 </html>

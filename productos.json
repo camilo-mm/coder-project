@@ -1,0 +1,97 @@
+[{
+        "nombre": "Buzo azul para niña",
+        "idproducto": 1,
+        "price": 50000,
+        "brand": "Tennis",
+        "category": "nina",
+        "img": ["img/product-001-a.jpg", "img/product-001-b.jpg"],
+        "discount": 30,
+        "variant": [
+            { "talla": "XS", "cantidad": 5, "skuId": "001-a" },
+            { "talla": "S", "cantidad": 3, "skuId": "001-b" },
+            { "talla": "M", "cantidad": 1, "skuId": "001-c" },
+            { "talla": "L", "cantidad": 0, "skuId": "001-d" },
+            { "talla": "XL", "cantidad": 1, "skuId": "001-e" }
+        ]
+    },
+    {
+        "nombre": "Buzo blanco para hombre",
+        "idproducto": 2,
+        "price": 20000,
+        "brand": "TopMark",
+        "category": "hombre",
+        "img": ["img/product-002-a.jpg", "img/product-002-b.jpg"],
+        "discount": 50,
+        "variant": [
+            { "talla": "XS", "cantidad": 2, "skuId": "002-a" },
+            { "talla": "S", "cantidad": 2, "skuId": "002-b" },
+            { "talla": "M", "cantidad": 1, "skuId": "002-c" },
+            { "talla": "L", "cantidad": 3, "skuId": "002-d" },
+            { "talla": "XL", "cantidad": 1, "skuId": "002-e" }
+        ]
+    },
+    {
+        "nombre": "Camisa Verde para mujer",
+        "idproducto": 3,
+        "price": 150000,
+        "brand": "Tennis",
+        "category": "mujer",
+        "img": ["img/product-003-a.jpg", "img/product-003-b.jpg"],
+        "discount": 0,
+        "variant": [
+            { "talla": "XS", "cantidad": 0, "skuId": "003-a" },
+            { "talla": "S", "cantidad": 3, "skuId": "003-b" },
+            { "talla": "M", "cantidad": 0, "skuId": "003-c" },
+            { "talla": "L", "cantidad": 2, "skuId": "003-d" },
+            { "talla": "XL", "cantidad": 0, "skuId": "003-e" }
+        ]
+    },
+    {
+        "nombre": "Camisa negra para mujer",
+        "idproducto": 4,
+        "price": 100000,
+        "brand": "TopMark",
+        "category": "mujer",
+        "img": ["img/product-004-a.jpg", "img/product-004-b.jpg"],
+        "discount": 0,
+        "variant": [
+            { "talla": "XS", "cantidad": 5, "skuId": "004-a" },
+            { "talla": "S", "cantidad": 4, "skuId": "004-b" },
+            { "talla": "M", "cantidad": 2, "skuId": "004-c" },
+            { "talla": "L", "cantidad": 1, "skuId": "004-d" },
+            { "talla": "XL", "cantidad": 1, "skuId": "004-e" }
+        ]
+    },
+    {
+        "nombre": "buzo verde para niño",
+        "idproducto": 5,
+        "price": 80000,
+        "brand": "Tennis",
+        "category": "nino",
+        "img": ["img/product-005-a.jpg", "img/product-005-b.jpg"],
+        "discount": 30,
+        "variant": [
+            { "talla": "XS", "cantidad": 3, "skuId": "005-a" },
+            { "talla": "S", "cantidad": 3, "skuId": "005-b" },
+            { "talla": "M", "cantidad": 0, "skuId": "005-c" },
+            { "talla": "L", "cantidad": 2, "skuId": "005-d" },
+            { "talla": "XL", "cantidad": 1, "skuId": "005-e" }
+        ]
+    },
+    {
+        "nombre": "buzo verde para niño",
+        "idproducto": 5,
+        "price": 80000,
+        "brand": "Tennis",
+        "category": "nino",
+        "img": ["img/product-005-a.jpg", "img/product-005-b.jpg"],
+        "discount": 10,
+        "variant": [
+            { "talla": "XS", "cantidad": 0, "skuId": "005-a" },
+            { "talla": "S", "cantidad": 0, "skuId": "005-b" },
+            { "talla": "M", "cantidad": 0, "skuId": "005-c" },
+            { "talla": "L", "cantidad": 0, "skuId": "005-d" },
+            { "talla": "XL", "cantidad": 0, "skuId": "005-e" }
+        ]
+    }
+]
