@@ -13,9 +13,7 @@ fetch('productos.json')
 
 let listadoDeProductos
 let listadoCategorias
-
 let listadoCategoriasUnicas
-
 
 
 let catalog = document.getElementById("products")
@@ -27,27 +25,20 @@ let countCart = document.getElementById("countCart")
 let closeMiniCart = document.getElementById("cerrar-mini-cart")
 let miniCarrito = document.getElementById("minicart")
 let iconMiniCart = document.getElementById("iconminicart")
-    //Pintar productos en el sitio
 
-
+//pintar productos en el sitio
 
 function renderProducts(listado, siteToRender) {
     //console.log("listado:", listado)
     siteToRender.innerHTML = ''
     listado.forEach((producto) => {
-        // sumarstock()
-        // let sumaStock
 
-        //function sumarstock() {
         const totalStock = []
         for (const stock of producto.variant) {
             //console.log(producto.variant)
             totalStock.push(stock.cantidad)
         }
         const sumaStock = totalStock.reduce(function(a, b) { return a + b });
-        // console.log(sumaStock)
-        // return sumaStock
-        //}
 
         if (sumaStock > 0) {
             //Item
@@ -147,23 +138,9 @@ function renderProducts(listado, siteToRender) {
             item.append(addToCart)
             siteToRender.append(item)
         }
-
-
-
-
     })
 
-
-
-    // printwislits()
-
 }
-
-
-
-
-//renderProducts(listadoDeProductos, catalog)
-//initWishlist()
 
 
 // Create buttons to filters
@@ -181,8 +158,6 @@ function crearCategorias() {
         button.addEventListener('click', filterproduct)
     })
 }
-
-
 
 
 // seleccionar boton ver todo
@@ -225,6 +200,7 @@ function addProductToCart(event) {
             sumoDesactivados.push(tallas.childNodes[index].dataset.skuId)
         }
         if (sumoDesactivados.length === tallas.childNodes.length) {
+            closeCart()
             let timerInterval
             Swal.fire({
                 title: 'Debes seleccionar una talla',
@@ -241,6 +217,7 @@ function addProductToCart(event) {
 }
 
 
+//pintar carrito
 
 function renderCart() {
     carrito.innerHTML = ''
@@ -352,6 +329,8 @@ function renderCart() {
 
 }
 
+//calcular totales
+
 function calcularTotal() {
     return carritoDeCompras.reduce((total, skuId) => {
         let itemsku = listadoDeProductos.filter((producto) => {
@@ -369,6 +348,8 @@ function calcularTotalAntes() {
         return total + itemsku[0].price
     }, 0)
 }
+
+//eliminar productos del carrito
 
 function removeitemCart(event) {
     event.preventDefault()
@@ -397,8 +378,8 @@ closeMiniCart.addEventListener('click', closeCart)
 iconMiniCart.addEventListener('click', openCart)
 iconMiniCart.addEventListener('mouseover', openCart)
 
-function closeCart(event) {
-    event.preventDefault
+function closeCart() {
+    //event.preventDefault
     miniCarrito.classList.add("miniclose")
 }
 
@@ -408,9 +389,7 @@ function openCart(event) {
     miniCarrito.classList.add("miniopen")
 }
 
-
-
-
+//storage
 
 function initCartStorage() {
     cargarCarrito()
@@ -422,7 +401,7 @@ function initCartStorage() {
 }
 
 
-//guardar wishlist storage
+//guardar carrito storage
 
 function saveCartStorage() {
     localStorage.setItem('carrito', JSON.stringify(carritoDeCompras))
